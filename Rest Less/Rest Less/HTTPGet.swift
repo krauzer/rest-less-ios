@@ -29,7 +29,6 @@ func HTTPGetJSON(source: String) {
             println("error")
             //handle data error
         }
-        self.delegate?.didReceiveAPIResults(responseDict)
     })
     
 }

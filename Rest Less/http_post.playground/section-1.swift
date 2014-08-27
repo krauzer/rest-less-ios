@@ -17,7 +17,7 @@ func HTTPostJSON(url: String,
     var subTask = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
         
         var strData = NSString(data: data, encoding: NSUTF8StringEncoding)
-        
+        println(response)
         var jsonRError: NSError?
         var json_response = NSJSONSerialization.JSONObjectWithData(data, options: .MutableLeaves, error: &jsonRError) as? NSDictionary
         println(jsonRError)
@@ -32,8 +32,8 @@ func HTTPostJSON(url: String,
     subTask.resume()
 }
 
-var params = ["workout_type":"weights"] as Dictionary
+var params = ["workout_history":["workout_id":1, "user_id":10]] as Dictionary
 
-HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercises", params)
+HTTPostJSON("http://localhost:3000//workout_histories", params)
 
 XCPSetExecutionShouldContinueIndefinitely(continueIndefinitely: true)

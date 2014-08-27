@@ -1,7 +1,8 @@
 import Foundation
 import XCPlayground
 
-let urlString = "http://localhost:3000/workouts/1.json"
+let urlString = "http://secret-stream-5880.herokuapp.com/workouts/2.json"
+
 
 protocol APIControllerProtocol{
     func receivedGetResponse(result: NSDictionary) -> NSDictionary
@@ -65,7 +66,6 @@ class Controller: APIControllerProtocol {
 }
 var cont = Controller()
 cont.call()
-
 
 
 //HTTPGetJSON(urlString)

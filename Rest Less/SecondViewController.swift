@@ -12,11 +12,47 @@ import UIKit
 class SecondViewController: UIViewController, APIGetWorkoutControllerProtocol {
     
     
+
+    var workoutTimer = NSTimer()
+    var accumulatedTime = 0.0
+    var startTimeDate: NSDate!
+    @IBOutlet weak var displayWorkoutLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        
+        var swipeRight = UISwipeGestureRecognizer(target: self, action: "respondToSwipeGesture:")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func startWorkout (sender: AnyObject) {
+        if workoutTimer.valid != true {
+        let aSelector : Selector = "sumWorkoutTime"
+        startTimeDate = NSDate(timeIntervalSinceReferenceDate: NSDate.timeIntervalSinceReferenceDate())
+        workoutTimer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        }
+    }
+    
+    @IBAction func stopWorkoutTime (sender: AnyObject) {
+        workoutTimer.invalidate()
+    }
+    
+    func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizerDirection.Right:
+                println("Swiped right")
+            default:
+                break
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,11 +60,10 @@ class SecondViewController: UIViewController, APIGetWorkoutControllerProtocol {
         // Dispose of any resources that can be recreated.
     }
     
+
     
     @IBAction func getWorkout(sender: AnyObject) {
         
-        var params = ["exercise_history":["weight":10, "reps":11,"rest_time":90, "distance":15, "running_time":400, "workout_history_id":3, "exercise_id":3]] as Dictionary
-        HTTPostJSON("http://secret-stream-5880.herokuapp.com/exercise_histories",  params)
         
         var api = APIGetWorkoutController()
         api.delegate = self
@@ -48,7 +83,14 @@ class SecondViewController: UIViewController, APIGetWorkoutControllerProtocol {
     
     
     
+    func sumWorkoutTime() {
+        accumulatedTime += workoutTimer.timeInterval
 
+
+    }
+    
+  
+    
     /*
     // MARK: - Navigation
 

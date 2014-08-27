@@ -10,6 +10,9 @@
 		095D99CA19A04A7C0041A9DD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095D99C919A04A7C0041A9DD /* SecondViewController.swift */; };
 		B88DEFDD19A07DA4008AA6FC /* SecondsToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */; };
 		EA29ABC819A0125B00539D98 /* HttpPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29ABC719A0125B00539D98 /* HttpPost.swift */; };
+		EA7BE6C719A1909A00B5F465 /* APIGetWorkoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7BE6C619A1909A00B5F465 /* APIGetWorkoutController.swift */; };
+		EAA7EDE419A15A2500EDD860 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7EDE319A15A2500EDD860 /* WorkoutModel.swift */; };
+		EAA7EDE619A15D5000EDD860 /* HTTPGet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7EDE519A15D5000EDD860 /* HTTPGet.swift */; };
 		EACBDF97199E8D0D00BDDC11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */; };
 		EACBDF9A199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACBDF98199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld */; };
 		EACBDF9C199E8D0D00BDDC11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACBDF9B199E8D0D00BDDC11 /* ViewController.swift */; };
@@ -29,9 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		095D99C919A04A7C0041A9DD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 		B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondsToDisplay.swift; sourceTree = "<group>"; };
 		EA29ABC719A0125B00539D98 /* HttpPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPost.swift; sourceTree = "<group>"; };
-		095D99C919A04A7C0041A9DD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
+		EA7BE6C619A1909A00B5F465 /* APIGetWorkoutController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIGetWorkoutController.swift; sourceTree = "<group>"; };
+		EAA7EDE319A15A2500EDD860 /* WorkoutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		EAA7EDE519A15D5000EDD860 /* HTTPGet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPGet.swift; sourceTree = "<group>"; };
 		EACBDF91199E8D0C00BDDC11 /* Rest Less.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rest Less.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACBDF95199E8D0D00BDDC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,12 +89,15 @@
 		EACBDF93199E8D0C00BDDC11 /* Rest Less */ = {
 			isa = PBXGroup;
 			children = (
-				EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */,
-				095D99C919A04A7C0041A9DD /* SecondViewController.swift */,
-				EACBDF9B199E8D0D00BDDC11 /* ViewController.swift */,
-				B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */,
 				EACBDF9D199E8D0D00BDDC11 /* Main.storyboard */,
+				EACBDF96199E8D0D00BDDC11 /* AppDelegate.swift */,
+				EACBDF9B199E8D0D00BDDC11 /* ViewController.swift */,
+				095D99C919A04A7C0041A9DD /* SecondViewController.swift */,
+				EA7BE6C619A1909A00B5F465 /* APIGetWorkoutController.swift */,
+				B88DEFDC19A07DA4008AA6FC /* SecondsToDisplay.swift */,
+				EAA7EDE319A15A2500EDD860 /* WorkoutModel.swift */,
 				EA29ABC719A0125B00539D98 /* HttpPost.swift */,
+				EAA7EDE519A15D5000EDD860 /* HTTPGet.swift */,
 				EACBDFA0199E8D0D00BDDC11 /* Images.xcassets */,
 				EACBDF98199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld */,
 				EACBDF94199E8D0C00BDDC11 /* Supporting Files */,
@@ -220,11 +229,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAA7EDE619A15D5000EDD860 /* HTTPGet.swift in Sources */,
 				095D99CA19A04A7C0041A9DD /* SecondViewController.swift in Sources */,
 				EACBDF9C199E8D0D00BDDC11 /* ViewController.swift in Sources */,
 				EACBDF9A199E8D0D00BDDC11 /* Rest_Less.xcdatamodeld in Sources */,
+				EAA7EDE419A15A2500EDD860 /* WorkoutModel.swift in Sources */,
 				EACBDF97199E8D0D00BDDC11 /* AppDelegate.swift in Sources */,
 				B88DEFDD19A07DA4008AA6FC /* SecondsToDisplay.swift in Sources */,
+				EA7BE6C719A1909A00B5F465 /* APIGetWorkoutController.swift in Sources */,
 				EA29ABC819A0125B00539D98 /* HttpPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
